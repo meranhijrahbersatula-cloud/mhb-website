@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const NAV_LINKS = [
   { label: "Beranda", href: "#hero" },
@@ -453,7 +454,7 @@ export default function App() {
               { icon: "💳", title: "Info Donasi", info: "Bank BNI • 193544110 • a/n Bambang Sucipto", color: "#2d9b5a" },
             ].map((c, i) => (
               <FadeIn key={c.title} delay={i * 0.1}>
-                <div style={{ background: "rgba(255,255,255,0.05)", borderRadius: 20, padding: "36px 28px", border: "1px solid rgba(255,255,255,0.08)", transition: "all 0.3s" }}
+                <div style={{ background: "rgba(255,255,255,0.05)", borderRadius: 20, padding: "36px 28px", border: "1px solid rgba(255,255,255,0.08)", minHeight: "260px", display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", transition: "all 0.3s" }}
                   onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.09)"; e.currentTarget.style.borderColor = "rgba(240,192,64,0.3)"; }}
                   onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.05)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; }}
                 >
@@ -476,9 +477,33 @@ export default function App() {
           © 2025 Komunitas Meran Hijrah Bersatu · Jakarta Selatan · Non-Profit Organization
         </p>
         <p style={{ color: "rgba(255,255,255,0.2)", fontSize: 11, marginTop: 8 }}>
-          Semoga setiap langkah kita menjadi amal jariyah 🌙
+          Bersama menebar kebaikan untuk sesama
         </p>
       </footer>
+     <a
+  href={`https://wa.me/6285697139810?text=${encodeURIComponent(
+    "Assalamualaikum, saya ingin mengetahui tentang organisasi ini, bagaimana cara bergabungnya?\n\nNama saya: .....\nAlamat: .....\nProfesi: ....."
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    position: "fixed",
+    bottom: "24px",
+    right: "24px",
+    width: "60px",
+    height: "60px",
+    borderRadius: "50%",
+    backgroundColor: "#25D366",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    boxShadow: "0 6px 20px rgba(0,0,0,0.25)",
+    zIndex: 9999,
+    textDecoration: "none",
+  }}
+>
+  <FaWhatsapp size={34} color="#fff" />
+</a>
 
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
