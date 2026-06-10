@@ -55,10 +55,10 @@ const KEGIATAN = [
 ];
 
 const STATS = [
-  { value: "200+", label: "Anggota Aktif" },
-  { value: "50+", label: "Yatim Disantuni" },
-  { value: "7", label: "Program Kegiatan" },
-  { value: "5+", label: "Tahun Berdiri" },
+  { value: "98+", label: "Anggota Aktif" },
+  { value: "100+", label: "Yatim Disantuni" },
+  { value: "8", label: "Program Kegiatan" },
+  { value: "6+", label: "Tahun Berdiri" },
 ];
 
 function useIntersect(threshold = 0.15) {
@@ -127,18 +127,25 @@ export default function App() {
         padding: "0 5%",
       }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", height: 70 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div style={{
-              width: 42, height: 42, borderRadius: "50%",
-              background: "linear-gradient(135deg, #1a6b3c, #2d9b5a)",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontSize: 20, boxShadow: "0 0 0 2px rgba(184,134,11,0.6)",
-            }}>🌙</div>
-            <div>
-              <div style={{ fontFamily: "'Cinzel', serif", color: "#f0c040", fontWeight: 700, fontSize: 17, letterSpacing: 1 }}>MHB</div>
-              <div style={{ color: "rgba(255,255,255,0.7)", fontSize: 10, letterSpacing: 2, textTransform: "uppercase" }}>Meran Hijrah Bersatu</div>
-            </div>
-          </div>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    cursor: "pointer",
+  }}
+  onClick={() => scrollTo("#hero")}
+>
+  <img
+    src="/mhb-website/mhb-logo-horizontal.png"
+    alt="Meran Hijrah Bersatu"
+    style={{
+      height: "46px",
+      width: "auto",
+      display: "block",
+      objectFit: "contain",
+    }}
+  />
+</div>
 
           {/* Desktop links */}
           <div style={{ display: "flex", gap: 28, alignItems: "center" }} className="desktop-nav">
