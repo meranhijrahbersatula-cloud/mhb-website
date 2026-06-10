@@ -355,6 +355,8 @@ export default function App() {
               { label: "Perayaan 17 Agustus", icon: "🎉", bg: "#0e4228" },
               { label: "Pengajian Rutin", icon: "📖", bg: "#1a5c35" },
               { label: "Tamasya Bersama", icon: "🌴", bg: "#0e4228" },
+              { label: "Memancing Bersama", icon: "🎣", bg: "#1a5c35" },
+              { label: "Menjenguk Orang Sakit", icon: "🏥", bg: "#0e4228" },
             ].map((g, i) => (
               <FadeIn key={g.label} delay={i * 0.07}>
                 <div style={{
