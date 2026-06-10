@@ -52,13 +52,19 @@ const KEGIATAN = [
     desc: "Kegiatan memancing bersama sebagai ajang silaturahmi dan rekreasi yang menyenangkan antar anggota komunitas.",
     color: "#1a6b3c",
   },
+  {
+  icon: "🏥",
+  title: "Menjenguk Orang Sakit",
+  desc: "Mengunjungi anggota komunitas atau warga yang sedang sakit sebagai bentuk kepedulian, dukungan moral, dan mempererat tali silaturahmi.",
+  color: "#b8860b",
+  },
 ];
 
 const STATS = [
   { value: "98+", label: "Anggota Aktif" },
   { value: "100+", label: "Yatim Disantuni" },
   { value: "8", label: "Program Kegiatan" },
-  { value: "6+", label: "Tahun Berdiri" },
+  { value: "6", label: "Tahun Berdiri" },
 ];
 
 function useIntersect(threshold = 0.15) {
@@ -293,22 +299,37 @@ export default function App() {
               <div style={{ width: 80, height: 3, background: "linear-gradient(90deg, #1a6b3c, #b8860b)", margin: "0 auto", borderRadius: 2 }} />
             </div>
           </FadeIn>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 28 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 28 }}>
             {KEGIATAN.map((k, i) => (
               <FadeIn key={k.title} delay={i * 0.08}>
-                <div style={{
-                  background: "#fff", borderRadius: 20, padding: "36px 28px",
-                  boxShadow: "0 4px 32px rgba(0,0,0,0.07)",
-                  borderTop: `4px solid ${k.color}`,
-                  transition: "transform 0.3s, box-shadow 0.3s",
-                  cursor: "default",
-                }}
-                  onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-6px)"; e.currentTarget.style.boxShadow = "0 16px 48px rgba(0,0,0,0.13)"; }}
-                  onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 32px rgba(0,0,0,0.07)"; }}
+                <div
+                  style={{
+                    background: "#fff",
+                    borderRadius: 20,
+                    padding: "36px 28px",
+                    boxShadow: "0 4px 32px rgba(0,0,0,0.07)",
+                    borderTop: `4px solid ${k.color}`,
+                    transition: "transform 0.3s, box-shadow 0.3s",
+                    cursor: "default",
+                    minHeight: 330,
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = "translateY(-6px)";
+                    e.currentTarget.style.boxShadow = "0 16px 48px rgba(0,0,0,0.13)";
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 32px rgba(0,0,0,0.07)";
+                  }}
                 >
                   <div style={{ fontSize: 44, marginBottom: 20 }}>{k.icon}</div>
                   <h3 style={{ fontFamily: "'Cinzel',serif", fontSize: 17, color: k.color, marginBottom: 12, lineHeight: 1.3 }}>{k.title}</h3>
-                  <p style={{ color: "#555", lineHeight: 1.8, fontSize: 14 }}>{k.desc}</p>
+                  <p style={{ color: "#555", lineHeight: 1.8, fontSize: 14, flexGrow: 1 }}>
+                    {k.desc}
+                  </p>
                 </div>
               </FadeIn>
             ))}
