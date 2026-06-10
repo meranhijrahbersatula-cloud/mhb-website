@@ -338,7 +338,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── GALERI placeholder ── */}
+      {/* ── GALERI ── */}
       <section id="galeri" style={{ padding: "100px 5%", background: "#0e3520" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <FadeIn>
@@ -350,12 +350,12 @@ export default function App() {
           </FadeIn>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 20 }}>
             {[
-              { label: "Santunan Yatim 2024", icon: "🤲", bg: "#1a5c35" },
-              { label: "Jumat Berkah", icon: "🕌", bg: "#0e4228" },
-              { label: "Kurban Idul Adha", icon: "🐄", bg: "#1a5c35" },
+              { label: "Santunan Anak Yatim", image: "/mhb-website/gallery/santunan-anak-yatim.jpg", icon: "🤲", bg: "#1a5c35" },
+              { label: "Jumat Berkah", image: "/mhb-website/gallery/jumat-berkah.jpg", icon: "🕌", bg: "#0e4228" },
+              { label: "Pemotongan Hewan Kurban", image: "/mhb-website/gallery/pemotongan-hewan-kurban.jpg", icon: "🐄", bg: "#1a5c35" },
               { label: "Perayaan 17 Agustus", icon: "🎉", bg: "#0e4228" },
-              { label: "Pengajian Rutin", icon: "📖", bg: "#1a5c35" },
-              { label: "Tamasya Bersama", icon: "🌴", bg: "#0e4228" },
+              { label: "Pengajian", icon: "📖", bg: "#1a5c35" },
+              { label: "Tamasya Bersama Yatim", icon: "🌴", bg: "#0e4228" },
               { label: "Memancing Bersama", icon: "🎣", bg: "#1a5c35" },
               { label: "Menjenguk Orang Sakit", icon: "🏥", bg: "#0e4228" },
             ].map((g, i) => (
@@ -366,13 +366,53 @@ export default function App() {
                   border: "1px solid rgba(240,192,64,0.2)",
                   transition: "all 0.3s",
                   position: "relative", overflow: "hidden",
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.14)",
                 }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(240,192,64,0.6)"; e.currentTarget.style.transform = "scale(1.02)"; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(240,192,64,0.2)"; e.currentTarget.style.transform = "scale(1)"; }}
                 >
-                  <div style={{ fontSize: 48, marginBottom: 12 }}>{g.icon}</div>
-                  <div style={{ color: "rgba(255,255,255,0.8)", fontSize: 13, fontWeight: 600, letterSpacing: 0.5, textAlign: "center", padding: "0 16px" }}>{g.label}</div>
-                  <div style={{ position: "absolute", bottom: 12, right: 12, fontSize: 11, color: "rgba(240,192,64,0.6)", letterSpacing: 1 }}>📷 Foto segera hadir</div>
+                  {g.image ? (
+                    <>
+                      <img
+                        src={g.image}
+                        alt={g.label}
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          transition: "transform 0.4s ease",
+                        }}
+                      />
+                      <div style={{
+                        position: "absolute",
+                        inset: 0,
+                        background: "linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(6,15,9,0.78) 100%)",
+                      }} />
+                      <div style={{
+                        position: "absolute",
+                        left: 18,
+                        right: 18,
+                        bottom: 18,
+                        color: "#fff",
+                        fontFamily: "'Cinzel',serif",
+                        fontSize: 14,
+                        fontWeight: 700,
+                        letterSpacing: 0.5,
+                        textAlign: "left",
+                        textShadow: "0 2px 12px rgba(0,0,0,0.6)",
+                      }}>
+                        {g.label}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div style={{ fontSize: 48, marginBottom: 12 }}>{g.icon}</div>
+                      <div style={{ color: "rgba(255,255,255,0.8)", fontSize: 13, fontWeight: 600, letterSpacing: 0.5, textAlign: "center", padding: "0 16px" }}>{g.label}</div>
+                      <div style={{ position: "absolute", bottom: 12, right: 12, fontSize: 11, color: "rgba(240,192,64,0.6)", letterSpacing: 1 }}>📷 Foto segera hadir</div>
+                    </>
+                  )}
                 </div>
               </FadeIn>
             ))}
