@@ -398,7 +398,23 @@ export default function App() {
           <FadeIn delay={0.2}>
             <div style={{ background: "#fff", borderRadius: 28, padding: "48px 40px", boxShadow: "0 16px 64px rgba(0,0,0,0.1)", border: "1px solid rgba(184,134,11,0.15)", position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 6, background: "linear-gradient(90deg, #1a6b3c, #b8860b, #1a6b3c)" }} />
-              <div style={{ fontSize: 56, marginBottom: 8 }}>🏦</div>
+              <div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    marginBottom: 16,
+  }}
+>
+  <img
+    src="/mhb-website/bni-logo.png"
+    alt="Bank BNI"
+    style={{
+      height: 55,
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
               <div style={{ fontSize: 13, color: "#b8860b", letterSpacing: 3, textTransform: "uppercase", marginBottom: 20 }}>Bank BNI</div>
               <div style={{ fontFamily: "'Cinzel',serif", fontSize: "clamp(28px, 5vw, 44px)", color: "#0e3520", fontWeight: 700, letterSpacing: 4, marginBottom: 8 }}>193544110</div>
               <div style={{ color: "#666", fontSize: 15, marginBottom: 32 }}>a/n <strong style={{ color: "#1a6b3c" }}>Bambang Sucipto</strong></div>
