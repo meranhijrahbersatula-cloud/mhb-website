@@ -447,7 +447,7 @@ export default function App() {
   }}
 >
   <img
-    src="/mhb-website/bni-logo.png"
+    src="/bni-logo.png"
     alt="Bank BNI"
     style={{
       height: 55,
