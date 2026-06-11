@@ -355,9 +355,9 @@ export default function App() {
               { label: "Pemotongan Hewan Kurban", image: "/gallery/pemotongan-hewan-kurban.jpg", icon: "🐄", bg: "#1a5c35" },
               { label: "Perayaan 17 Agustus", icon: "🎉", bg: "#0e4228" },
               { label: "Pengajian", icon: "📖", bg: "#1a5c35" },
-              { label: "Tamasya Bersama Yatim", icon: "🌴", bg: "#0e4228" },
-              { label: "Memancing Bersama", icon: "🎣", bg: "#1a5c35" },
-              { label: "Menjenguk Orang Sakit", icon: "🏥", bg: "#0e4228" },
+              { label: "Tamasya Bersama Yatim", image: "/gallery/tamasya-bersama-yatim.jpg", icon: "🌴", bg: "#0e4228" },
+              { label: "Memancing Bersama", image: "/gallery/memancing-bersama.jpg", icon: "🎣", bg: "#1a5c35" },
+              { label: "Menjenguk Orang Sakit", image: "/gallery/menjenguk-orang-sakit.jpg", icon: "🏥", bg: "#0e4228" },
             ].map((g, i) => (
               <FadeIn key={g.label} delay={i * 0.07}>
                 <div style={{
