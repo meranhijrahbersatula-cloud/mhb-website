@@ -143,7 +143,7 @@ export default function App() {
   onClick={() => scrollTo("#hero")}
 >
   <img
-    src="/mhb-website/mhb-logo-horizontal.png"
+    src="/mhb-logo-horizontal.png"
     alt="Meran Hijrah Bersatu"
     style={{
       height: "46px",
@@ -350,9 +350,9 @@ export default function App() {
           </FadeIn>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 20 }}>
             {[
-              { label: "Santunan Anak Yatim", image: "/mhb-website/gallery/santunan-anak-yatim.jpg", icon: "🤲", bg: "#1a5c35" },
-              { label: "Jumat Berkah", image: "/mhb-website/gallery/jumat-berkah.jpg", icon: "🕌", bg: "#0e4228" },
-              { label: "Pemotongan Hewan Kurban", image: "/mhb-website/gallery/pemotongan-hewan-kurban.jpg", icon: "🐄", bg: "#1a5c35" },
+              { label: "Santunan Anak Yatim", image: "/gallery/santunan-anak-yatim.jpg", icon: "🤲", bg: "#1a5c35" },
+              { label: "Jumat Berkah", image: "/gallery/jumat-berkah.jpg", icon: "🕌", bg: "#0e4228" },
+              { label: "Pemotongan Hewan Kurban", image: "/gallery/pemotongan-hewan-kurban.jpg", icon: "🐄", bg: "#1a5c35" },
               { label: "Perayaan 17 Agustus", icon: "🎉", bg: "#0e4228" },
               { label: "Pengajian", icon: "📖", bg: "#1a5c35" },
               { label: "Tamasya Bersama Yatim", icon: "🌴", bg: "#0e4228" },
