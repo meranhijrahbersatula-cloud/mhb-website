@@ -353,7 +353,7 @@ export default function App() {
               { label: "Santunan Anak Yatim", image: "/gallery/santunan-anak-yatim.jpg", icon: "🤲", bg: "#1a5c35" },
               { label: "Jumat Berkah", image: "/gallery/jumat-berkah.jpg", icon: "🕌", bg: "#0e4228" },
               { label: "Pemotongan Hewan Kurban", image: "/gallery/pemotongan-hewan-kurban.jpg", icon: "🐄", bg: "#1a5c35" },
-              { label: "Perayaan 17 Agustus", icon: "🎉", bg: "#0e4228" },
+              { label: "Perayaan 17 Agustus", image: "/gallery/perayaan-17-agustus.jpg", icon: "🎉", bg: "#0e4228" },
               { label: "Pengajian", image: "/gallery/Pengajian.jpg", icon: "📖", bg: "#1a5c35" },
               { label: "Tamasya Bersama Yatim", image: "/gallery/tamasya-bersama-yatim.jpg", icon: "🌴", bg: "#0e4228" },
               { label: "Memancing Bersama", image: "/gallery/memancing-bersama.jpg", icon: "🎣", bg: "#1a5c35" },
